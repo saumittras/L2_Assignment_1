@@ -6,12 +6,19 @@ const formatString = (input: string, toUpper: boolean = true): string => {
   }
 };
 
-type Book = {
+const filterByRating = (
+  items: {
+    title: string;
+    rating: number;
+  }[]
+): {
   title: string;
   rating: number;
-};
-const filterByRating = (items: Book[]): Book[] => {
-  let output: Book[] = items.filter((item) => item.rating >= 4);
+}[] => {
+  let output: {
+    title: string;
+    rating: number;
+  }[] = items.filter((item) => item.rating >= 4);
   return output;
 };
 
