@@ -20,9 +20,9 @@ type UserType = {
 };
 ```
 
-✅ Both allow you to create reusable custom types across your codebase.
-✅ You can extend existing types/interfaces to build new ones (with different syntax).
-✅ Used for Functions & Classes:
+✅ Both allow you to create reusable custom types across your codebase.<br>
+✅ You can extend existing types/interfaces to build new ones (with different syntax).<br>
+✅ Used for Functions & Classes:<br>
 
 ```ts
 interface Greet {
@@ -30,6 +30,18 @@ interface Greet {
 }
 
 type GreetType = (name: string) => string;
+```
+
+✅ Work with generics<br>
+
+```ts
+interface Cat<T> {
+  name: T;
+}
+
+type CatType<T> = {
+  name: T;
+};
 ```
 
 # 🆚 What is the use of the keyof keyword in TypeScript? Provide an example.
