@@ -63,3 +63,28 @@ type CatType<T> = {
 | Library or public API definitions         | ✅ Preferred | ❌ Avoid complex types |
 
 # 2. What is the use of the keyof keyword in TypeScript? Provide an example.
+
+## 🧠 Introduction
+
+TypeScript provide
+TypeScript provides several advanced type features to help developers write safer and more maintainable code. One such feature is the `keyof` keyword, which is used to extract the **keys** of a given object type or interface.
+
+In this blog post, we will explore the `keyof` keyword, its practical applications, and how it can enhance your TypeScript code.
+
+## What Does `keyof` Do?
+
+The `keyof` keyword takes an object type or interface and return a union of its keys. for example<br>
+
+```ts
+interface User {
+  name: string;
+  age: number;
+  isAdmin: boolean;
+}
+
+// keyof User results in: 'name' | 'age' | 'isAdmin'
+type UserKeys = keyof User;
+
+const key: UserKeys = "age"; // ✅ Valid
+// const key2: UserKeys = 'email'; ❌ Error: 'email' is not a key of User
+```
