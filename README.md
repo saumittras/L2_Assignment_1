@@ -88,3 +88,37 @@ type UserKeys = keyof User;
 const key: UserKeys = "age"; // ✅ Valid
 // const key2: UserKeys = 'email'; ❌ Error: 'email' is not a key of User
 ```
+
+## Example of `keyof`:<br>
+
+```ts
+// Generic Constraint with key operator
+type Vehicle = {
+  bike: string;
+  car: string;
+  ship: string;
+};
+
+// methode 2 typeof
+type Owner = "bike" | "car" | "ship";
+type Owner2 = keyof Vehicle;
+
+//function will get an object and key
+const getPropertyValue = <X, Y extends keyof X>(obj: X, key: Y) => {
+  return obj[key];
+};
+
+const user = {
+  name: "Mr. Sarker",
+  age: 26,
+  address: "Satkhira",
+};
+
+const car = {
+  model: "Toyata 100",
+  year: 2000,
+};
+
+const result1 = getPropertyValue(user, "age");
+const result2 = getPropertyValue(car, "model");
+```
