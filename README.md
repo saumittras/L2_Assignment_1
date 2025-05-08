@@ -44,4 +44,13 @@ type CatType<T> = {
 };
 ```
 
+## ⚔️ Differences Between Interface and Type
+
+| Name                     | Interface                       | Type                                       |
+| ------------------------ | ------------------------------- | ------------------------------------------ |
+| Extedging                | ✅Can be extended using extends | ✅Can be extended using extends &          |
+| Declaration Merging      | ✅ Supporte                     | ❌ Not supported                           |
+| Union Types              | ❌ No direct                    | ✅ Fully Supporte                          |
+| Supports Primitive Types | ❌ Only object/class            | ✅ Can alias primitives, tuples, functions |
+
 # 🆚 What is the use of the keyof keyword in TypeScript? Provide an example.
