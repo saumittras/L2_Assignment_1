@@ -1,4 +1,4 @@
-# 🆚 Interface vs Type in TypeScript: What’s the Real Difference?
+# 1. 🆚 Interface vs Type in TypeScript: What’s the Real Difference?
 
 ## 🧠 Introduction
 
@@ -46,11 +46,20 @@ type CatType<T> = {
 
 ## ⚔️ Differences Between Interface and Type
 
-| Name                     | Interface                       | Type                                       |
+| Feature                  | Interface                       | Type                                       |
 | ------------------------ | ------------------------------- | ------------------------------------------ |
 | Extedging                | ✅Can be extended using extends | ✅Can be extended using extends &          |
 | Declaration Merging      | ✅ Supporte                     | ❌ Not supported                           |
 | Union Types              | ❌ No direct                    | ✅ Fully Supporte                          |
 | Supports Primitive Types | ❌ Only object/class            | ✅ Can alias primitives, tuples, functions |
 
-# 🆚 What is the use of the keyof keyword in TypeScript? Provide an example.
+## ⚔️ When to use interface and type
+
+| Use Case                                  | `interface`  | `type`                 |
+| ----------------------------------------- | ------------ | ---------------------- |
+| Defining object shapes or class contracts | ✅ Yes       | ✅ Yes                 |
+| Extending/merging types                   | ✅ Yes       | ✅ With `&`            |
+| Creating union/primitive/tuple types      | ❌ No        | ✅ Yes                 |
+| Library or public API definitions         | ✅ Preferred | ❌ Avoid complex types |
+
+# 2. What is the use of the keyof keyword in TypeScript? Provide an example.
